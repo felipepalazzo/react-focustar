@@ -1,5 +1,5 @@
-import Widget from "../src/components/Widget";
+import Widget from '../src/components/Widget'
 
 export default function App() {
-    return <Widget />
-  }
+  return <Widget />
+}
