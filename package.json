@@ -12,6 +12,10 @@
     "watch": "parcel watch",
     "build": "parcel build"
   },
+  "files": [
+    "dist",
+    "public"
+  ],
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
