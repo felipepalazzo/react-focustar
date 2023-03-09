@@ -1,5 +1,5 @@
 node_modules/
 .parcel-cache/
 dist/
-public/
+demo/
 .DS_Store

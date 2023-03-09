@@ -12,13 +12,13 @@
   },
   "author": "Felipe Palazzo <palazzofelipe@gmail.com>",
   "scripts": {
-    "start": "parcel ./demo/index.html --dist-dir public",
+    "start": "parcel ./example/index.html --dist-dir demo",
     "watch": "parcel watch",
     "build": "parcel build"
   },
   "files": [
     "dist",
-    "public"
+    "demo"
   ],
   "dependencies": {
     "react": "^18.2.0",
