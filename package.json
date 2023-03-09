@@ -6,6 +6,7 @@
   "module": "dist/module.js",
   "types": "dist/types.d.ts",
   "license": "MIT",
+  "author": "Felipe Palazzo <palazzofelipe@gmail.com>",
   "scripts": {
     "start": "parcel ./demo/index.html --dist-dir public",
     "watch": "parcel watch",
