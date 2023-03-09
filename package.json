@@ -1,16 +1,23 @@
 {
   "name": "focustar-react",
-  "version": "1.0.0",
-  "source": "./examples/index.html",
+  "version": "0.0.1",
+  "source": "src/index.ts",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
   "license": "MIT",
   "scripts": {
-    "start": "parcel"
+    "start": "parcel ./demo/index.html --dist-dir public",
+    "watch": "parcel watch",
+    "build": "parcel build"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@parcel/packager-ts": "2.8.3",
+    "@parcel/transformer-typescript-types": "2.8.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
