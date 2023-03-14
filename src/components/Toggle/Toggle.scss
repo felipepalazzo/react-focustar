@@ -1,0 +1,64 @@
+@import '../../styles/variables';
+
+.toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8px 16px;
+    gap: 24px;
+    isolation: isolate;
+    width: fit-content;
+    cursor: pointer;
+    background: linear-gradient(180deg, #2C64E3 0%, #164FD0 100%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%), 0 2px 4px rgba(0 0 0 / 10%), inset 0 1px 1px $light-blue;
+    border-radius: 20px;
+    position: relative;
+    margin: 40px auto 24px;
+
+    .selection {
+        position: absolute;
+        width: 104px;
+        height: 26px;
+        background: $snow;
+        border-radius: 16px;
+        top: 4px;
+        left: 4px;
+        z-index: 10;
+        transition: left 0.2s cubic-bezier(0.4, 1.26, 0.58, 1);
+    }
+
+    .button {
+        width: 80px;
+        text-align: center;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        z-index: 20;
+
+        &.after {
+            color: rgb(255 255 255 / 40%);
+            font-weight: 500;
+        }
+
+        &.before {
+            color: $dark-grey;
+            font-weight: 800;
+        }
+    }
+
+    &.toggled {
+        .selection {
+            left: 108px;
+        }
+
+        .button.after 	{
+            color: $dark-grey;
+            font-weight: 800;
+        }
+
+        .button.before {
+            color: rgb(255 255 255 / 40%);
+            font-weight: 500;
+        }
+    }
+}

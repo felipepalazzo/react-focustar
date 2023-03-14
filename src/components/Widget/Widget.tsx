@@ -1,4 +1,5 @@
-import Toggle from './Toggle'
+import Toggle from '../Toggle/Toggle'
+import './Widget.scss'
 
 type WidgetProps = {
   images: {
@@ -11,8 +12,8 @@ const Widget = ({ images }: WidgetProps) => {
   return (
     <section>
       <div className="container">
-        <img src={images.old} className="after" />
-        <img src={images.new} className="before" />
+        <img src={images.old} className="container-img after" />
+        <img src={images.new} className="container-img before" />
         <div className="dot">1</div>
         <div className="dot">2</div>
         <div className="dot">3</div>
