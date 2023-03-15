@@ -1,4 +1,4 @@
-import Toggle from '../Toggle/Toggle'
+import { Toggle } from '../Toggle'
 import './Widget.scss'
 
 type WidgetProps = {
@@ -18,7 +18,7 @@ const Widget = ({ images }: WidgetProps) => {
         <div className="dot">2</div>
         <div className="dot">3</div>
       </div>
-      <Toggle />
+      <Toggle onClick={checked => console.log('checked?', checked)} />
     </section>
   )
 }
