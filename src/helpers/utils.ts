@@ -1,4 +1,4 @@
-export const normalizeGroups = (
+export const normalizeGroup = (
   arrayBase: { x: number; y: number }[],
   arrayCompare: { x: number; y: number }[]
 ): { top: number; left: number; scale?: number }[] => {

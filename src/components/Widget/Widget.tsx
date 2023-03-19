@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import Toggle from '../Toggle'
 import Dot from '../Dot'
 import './Widget.scss'
-import { normalizeGroups } from '../../utils'
+import { normalizeGroup } from '../../helpers/utils'
 
 type Dots = {
   old: { x: number; y: number }[]
@@ -23,10 +23,10 @@ export const Widget = ({ images, dots }: WidgetProps) => {
 
   const getGroup = useCallback(() => {
     if (isOn) {
-      return normalizeGroups(dots.new, dots.old)
+      return normalizeGroup(dots.new, dots.old)
     }
 
-    return normalizeGroups(dots.old, dots.new)
+    return normalizeGroup(dots.old, dots.new)
   }, [isOn])
 
   return (
@@ -35,13 +35,13 @@ export const Widget = ({ images, dots }: WidgetProps) => {
         <img src={images.old} className="widget__img old" />
         <img src={images.new} className="widget__img new" />
       </div>
-      {getGroup().map((item, index) => (
+      {getGroup().map(({ top, left, scale }, index) => (
         <Dot
           index={index + 1}
           key={index}
-          top={item.top}
-          left={item.left}
-          scale={item.scale}
+          top={top}
+          left={left}
+          scale={scale}
         />
       ))}
       <Toggle onClick={onClick} />
