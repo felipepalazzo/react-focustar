@@ -10,6 +10,11 @@
                 opacity: 1;
             }
         }
+
+        &:hover .dot:not(.hide) {
+            color: white;
+            transform: scale(1)
+        }
     }
 
     &__img {

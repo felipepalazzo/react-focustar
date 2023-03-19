@@ -34,16 +34,10 @@ export const Widget = ({ images, dots }: WidgetProps) => {
       <div className={classnames('widget__container', { after: isOn })}>
         <img src={images.old} className="widget__img old" />
         <img src={images.new} className="widget__img new" />
+        {getGroup().map(({ top, left, scale }, index) => (
+          <Dot index={index} key={index} top={top} left={left} scale={scale} />
+        ))}
       </div>
-      {getGroup().map(({ top, left, scale }, index) => (
-        <Dot
-          index={index + 1}
-          key={index}
-          top={top}
-          left={left}
-          scale={scale}
-        />
-      ))}
       <Toggle onClick={onClick} />
     </section>
   )
