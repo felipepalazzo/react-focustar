@@ -2,10 +2,9 @@
 
 .widget {
     width: 100%;
+    position: relative;
 
     &__container {
-        position: relative;
-
         &.after {
             .new {
                 opacity: 1;

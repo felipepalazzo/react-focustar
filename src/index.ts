@@ -1,2 +1,1 @@
-import Widget from './components/Widget/Widget'
-export default Widget
+export { Widget as default } from './components/Widget'
