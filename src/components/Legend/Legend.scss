@@ -1,0 +1,37 @@
+@import '../../styles/variables';
+
+.legend {
+    max-width: 640;
+    margin: 40px auto;
+    cursor: default;
+
+    &__dot {
+        @extend %dot;
+
+        color: white;
+        width: $legend-dot-size;
+        height: $legend-dot-size;
+        line-height: $legend-dot-size;
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        transition:
+            transform 0.1s ease-in-out;
+
+        &.focused {
+            transform: scale(1.01);
+
+            .legend__dot {
+                box-shadow:
+                    0 1px 1px rgba(0 0 0 / 10%),
+                    0 2px 4px rgba(0 0 0 / 10%),
+                    inset 0 1px 1px #68B2C9,
+                    0 0 0 4px rgba(22 79 208 / 20%);
+            }
+        }
+    }
+}

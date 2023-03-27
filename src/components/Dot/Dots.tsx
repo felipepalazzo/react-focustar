@@ -5,11 +5,22 @@ type DotProps = {
   index: number
   top: number
   left: number
+  onMouseOver: (id: number) => void
+  onMouseOut: () => void
   scale?: number
 }
 
-export const Dot = ({ index, top, left, scale }: DotProps) => (
+export const Dot = ({
+  index,
+  top,
+  left,
+  scale,
+  onMouseOver,
+  onMouseOut,
+}: DotProps) => (
   <div
+    onMouseOver={() => onMouseOver(index)}
+    onMouseOut={onMouseOut}
     className={classnames('dot', {
       hide: scale === 0,
     })}

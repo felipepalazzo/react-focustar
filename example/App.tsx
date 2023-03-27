@@ -22,6 +22,11 @@ export default function App() {
             { x: 200, y: 80 },
           ],
         }}
+        legend={[
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+          'Integer ut sem nec sem fringilla suscipit eget viverra nunc.',
+        ]}
       />
     </div>
   )
