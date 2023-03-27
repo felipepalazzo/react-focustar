@@ -5,6 +5,7 @@ type DotProps = {
   index: number
   top: number
   left: number
+  isFocused: boolean
   onMouseOver: (id: number) => void
   onMouseOut: () => void
   scale?: number
@@ -15,6 +16,7 @@ export const Dot = ({
   top,
   left,
   scale,
+  isFocused,
   onMouseOver,
   onMouseOut,
 }: DotProps) => (
@@ -23,6 +25,7 @@ export const Dot = ({
     onMouseOut={onMouseOut}
     className={classnames('dot', {
       hide: scale === 0,
+      focused: isFocused,
     })}
     style={{
       top,

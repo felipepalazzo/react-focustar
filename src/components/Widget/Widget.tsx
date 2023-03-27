@@ -32,11 +32,7 @@ export const Widget = ({ images, dots, legend }: WidgetProps) => {
     return normalizeGroup(dots.old, dots.new)
   }, [isOn])
 
-  const onDotOver = (index: number) => {
-    setActiveDot(index)
-  }
-
-  const onDotOut = () => {
+  const onMouseOut = () => {
     setActiveDot(undefined)
   }
 
@@ -52,16 +48,22 @@ export const Widget = ({ images, dots, legend }: WidgetProps) => {
             top={top}
             left={left}
             scale={scale}
-            onMouseOver={onDotOver}
-            onMouseOut={onDotOut}
+            isFocused={index === activeDot}
+            onMouseOver={setActiveDot}
+            onMouseOut={onMouseOut}
           />
         ))}
-      </div>
-      <Toggle onClick={onClick} />
-      <div className="widget__legend">
-        {legend?.length ? (
-          <Legend textGroup={legend} activeIndex={activeDot} />
-        ) : null}
+        <Toggle onClick={onClick} />
+        <div className="widget__legend">
+          {legend?.length ? (
+            <Legend
+              textGroup={legend}
+              activeIndex={activeDot}
+              onMouseOver={setActiveDot}
+              onMouseOut={onMouseOut}
+            />
+          ) : null}
+        </div>
       </div>
     </section>
   )
