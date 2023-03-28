@@ -37,7 +37,7 @@ export const Widget = ({ images, dots, legend }: WidgetProps) => {
   }
 
   return (
-    <section className="widget">
+    <section className="widget" data-testid="widget-component">
       <div className={classnames('widget__container', { after: isOn })}>
         <img src={images.old} className="widget__img old" />
         <img src={images.new} className="widget__img new" />

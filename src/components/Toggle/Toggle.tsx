@@ -22,7 +22,8 @@ export const Toggle = ({ onClick }: ToggleProps) => {
   return (
     <label className={classnames('toggle', { toggled })}>
       <input
-        onClick={handleClick}
+        data-testid="input-checkbox"
+        onChange={handleClick}
         type="checkbox"
         className="toggle__input"
         checked={toggled}
