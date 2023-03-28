@@ -15,7 +15,10 @@
     "start": "parcel ./example/index.html --dist-dir demo",
     "watch": "parcel watch",
     "build": "parcel build",
-    "test": "jest"
+    "typecheck": "tsc",
+    "test": "jest",
+    "lint": "eslint --ext .ts,.tsx",
+    "lint:styles": "stylelint \"**/*.scss\""
   },
   "files": [
     "dist",
