@@ -3,6 +3,7 @@ import classnames from 'classnames'
 import Toggle from '../Toggle'
 import Dot from '../Dot'
 import Legend from '../Legend'
+import { DotType } from '../../types'
 import { normalizeGroup } from '../../helpers/utils'
 import './Widget.scss'
 

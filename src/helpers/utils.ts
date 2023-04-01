@@ -1,3 +1,5 @@
+import { DotType } from '../types'
+
 export const normalizeGroup = (
   arrayBase: DotType[],
   arrayCompare: DotType[]
