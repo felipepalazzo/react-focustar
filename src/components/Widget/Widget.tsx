@@ -7,8 +7,8 @@ import { normalizeGroup } from '../../helpers/utils'
 import './Widget.scss'
 
 type Dots = {
-  old: Dot[]
-  new: Dot[]
+  old: DotType[]
+  new: DotType[]
 }
 
 type WidgetProps = {

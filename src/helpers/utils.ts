@@ -1,6 +1,6 @@
 export const normalizeGroup = (
-  arrayBase: Dot[],
-  arrayCompare: Dot[]
+  arrayBase: DotType[],
+  arrayCompare: DotType[]
 ): { top: number | string; left: number | string; scale?: number }[] => {
   if (arrayBase.length < arrayCompare.length) {
     const slice = arrayCompare
