@@ -3,8 +3,8 @@ import './Dot.scss'
 
 type DotProps = {
   index: number
-  top: number
-  left: number
+  top: number | string
+  left: number | string
   isFocused: boolean
   onMouseOver: (id: number) => void
   onMouseOut: () => void

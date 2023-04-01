@@ -1,7 +1,7 @@
 export const normalizeGroup = (
-  arrayBase: { x: number; y: number }[],
-  arrayCompare: { x: number; y: number }[]
-): { top: number; left: number; scale?: number }[] => {
+  arrayBase: Dot[],
+  arrayCompare: Dot[]
+): { top: number | string; left: number | string; scale?: number }[] => {
   if (arrayBase.length < arrayCompare.length) {
     const slice = arrayCompare
       .slice((arrayCompare.length - arrayBase.length) * -1)

@@ -2,7 +2,6 @@
 
 .widget {
     width: 100%;
-    position: relative;
 
     &__container {
         &.after {
@@ -15,6 +14,10 @@
             color: white;
             transform: scale(1)
         }
+    }
+
+    &__content {
+        position: relative;
     }
 
     &__img {
