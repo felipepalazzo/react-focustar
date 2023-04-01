@@ -8,7 +8,6 @@
     "strict": true,
     "skipLibCheck": true,
     "experimentalDecorators": true,
-    "isolatedModules": true,
-    "outDir": "output/"
+    "isolatedModules": true
   }
 }
