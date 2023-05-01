@@ -2,8 +2,7 @@
   "name": "react-focustar",
   "version": "0.0.8",
   "source": "src/index.ts",
-  "main": "dist/main.cjs",
-  "module": "dist/module.mjs",
+  "main": "dist/main.mjs",
   "types": "dist/types.d.ts",
   "license": "MIT",
   "repository": {
@@ -20,6 +19,13 @@
     "lint": "eslint --ext .ts,.tsx",
     "lint:styles": "stylelint \"**/*.scss\"",
     "semantic-release": "semantic-release"
+  },
+  "targets": {
+    "main": {
+      "isLibrary": true,
+      "outputFormat": "esmodule",
+      "scopeHoist": true
+    }
   },
   "files": [
     "dist",
