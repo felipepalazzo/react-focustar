@@ -1,13 +1,10 @@
 name: Release
 
-# Only trigger, when the build CI succeeded
 on:
   workflow_run:
-    workflows: ['build']
-    types: [requested]
-  push:
-    branches:
-      - main
+    workflows: ['Build']
+    types: [completed]
+
 jobs:
   release:
     permissions:
