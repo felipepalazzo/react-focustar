@@ -4,8 +4,7 @@ name: Release
 on:
   workflow_run:
     workflows: ['build']
-    types:
-      - completed
+    types: [requested]
   push:
     branches:
       - main
