@@ -17,7 +17,7 @@ type WidgetProps = {
     old: string
     new: string
   }
-  dots: Dots
+  dots: Dots | DotType[]
   legend?: string[]
 }
 
@@ -26,6 +26,9 @@ export const Widget = ({ images, dots, legend }: WidgetProps) => {
   const [activeDot, setActiveDot] = useState<number>()
 
   const getGroup = useCallback(() => {
+    if (Array.isArray(dots)) {
+      return normalizeGroup(dots)
+    }
     if (isOn) {
       return normalizeGroup(dots.new, dots.old)
     }

@@ -2,9 +2,9 @@ import { DotType } from '../types'
 
 export const normalizeGroup = (
   arrayBase: DotType[],
-  arrayCompare: DotType[]
+  arrayCompare?: DotType[]
 ): { top: number | string; left: number | string; scale?: number }[] => {
-  if (arrayBase.length < arrayCompare.length) {
+  if (arrayCompare && arrayBase.length < arrayCompare.length) {
     const slice = arrayCompare
       .slice((arrayCompare.length - arrayBase.length) * -1)
       .map(item => ({ ...item, scale: 0 }))
