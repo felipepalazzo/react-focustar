@@ -1,17 +1,12 @@
 {
   "branches": ["main"],
   "plugins": [
+    "@semantic-release/npm",
     "@semantic-release/release-notes-generator",
     [
       "@semantic-release/git",
       {
         "assets": ["package.json"]
-      }
-    ],
-    [
-      "@semantic-release/npm",
-      {
-        "pkgRoot": "dist"
       }
     ],
     [
