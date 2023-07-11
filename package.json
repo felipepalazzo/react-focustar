@@ -1,6 +1,6 @@
 {
   "name": "react-focustar",
-  "version": "0.0.9",
+  "version": "0.0.12",
   "source": "src/index.ts",
   "main": "dist/main.js",
   "types": "dist/types.d.ts",
