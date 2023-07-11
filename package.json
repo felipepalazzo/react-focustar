@@ -2,8 +2,9 @@
   "name": "react-focustar",
   "version": "0.0.9",
   "source": "src/index.ts",
-  "main": "dist/main.mjs",
+  "main": "dist/main.js",
   "types": "dist/types.d.ts",
+  "module": "dist/module.js",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -13,19 +14,13 @@
   "scripts": {
     "start": "parcel ./example/index.html --dist-dir demo",
     "watch": "parcel watch",
-    "build": "parcel build && cp -r package.json dist/package.json",
+    "build": "parcel build && cp -r package.json dist/package.json && cp -r README.md dist/README.md",
     "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .parcel-cache",
     "test": "jest",
     "lint": "eslint --ext .ts,.tsx",
     "lint:styles": "stylelint \"**/*.scss\"",
     "semantic-release": "semantic-release"
-  },
-  "targets": {
-    "main": {
-      "isLibrary": true,
-      "outputFormat": "esmodule",
-      "scopeHoist": true
-    }
   },
   "dependencies": {
     "classnames": "^2.3.2",
