@@ -27,6 +27,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
+  "files": [
+    "dist",
+    "demo"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.6.1",
