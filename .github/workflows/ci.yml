@@ -17,8 +17,10 @@ jobs:
           node-version: 'lts/*'
           cache: 'yarn'
       - run: yarn
-      - run: yarn typecheck
       - run: yarn build
+      - run: yarn link
+      - run: cd example && yarn link react-focustar
+      - run: yarn typecheck
       - run: yarn test
       - run: yarn lint
       - run: yarn lint:styles
