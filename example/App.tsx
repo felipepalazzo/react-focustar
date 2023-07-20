@@ -1,4 +1,4 @@
-import Widget from '../src'
+import { Widget } from 'react-focustar'
 import Img1 from './img/integrate-web-builder.png'
 import Img2 from './img/integrate-web-event.png'
 import './styles/main.scss'
