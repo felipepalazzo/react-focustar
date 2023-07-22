@@ -4,19 +4,16 @@ import Toggle from '../Toggle'
 import Dot from '../Dot'
 import Legend from '../Legend'
 import { DotType } from '../../types'
-import { normalizeGroup } from '../../helpers/utils'
+import { getImages, normalizeGroup } from '../../helpers/utils'
 import './Widget.scss'
 
 type Dots = {
-  old: DotType[]
-  new: DotType[]
+  before: DotType[]
+  after: DotType[]
 }
 
 type WidgetProps = {
-  images: {
-    old: string
-    new: string
-  }
+  images: string[]
   dots: Dots | DotType[]
   legend?: string[]
 }
@@ -30,10 +27,10 @@ export const Widget = ({ images, dots, legend }: WidgetProps) => {
       return normalizeGroup(dots)
     }
     if (isOn) {
-      return normalizeGroup(dots.new, dots.old)
+      return normalizeGroup(dots.after, dots.before)
     }
 
-    return normalizeGroup(dots.old, dots.new)
+    return normalizeGroup(dots.before, dots.after)
   }, [isOn])
 
   const onMouseOut = () => {
@@ -44,8 +41,13 @@ export const Widget = ({ images, dots, legend }: WidgetProps) => {
     <section className="widget" data-testid="widget-component">
       <div className={classnames('widget__container', { after: isOn })}>
         <div className="widget__content">
-          <img src={images.old} className="widget__img old" />
-          <img src={images.new} className="widget__img new" />
+          {getImages(images).map((img, i) => (
+            <img
+              key={i}
+              src={img.src}
+              className={`widget__img ${img.className}`}
+            />
+          ))}
           {getGroup().map(({ top, left, scale }, index) => (
             <Dot
               index={index}

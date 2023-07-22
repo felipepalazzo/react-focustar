@@ -1,23 +1,20 @@
 import { Widget } from 'react-focustar'
 import Img1 from './img/integrate-web-builder.png'
-import Img2 from './img/integrate-web-event.png'
+import Img2 from '/example/img/integrate-web-event.png'
 import './styles/main.scss'
 
 export default function App() {
   return (
     <div className="container">
       <Widget
-        images={{
-          old: Img1,
-          new: Img2,
-        }}
+        images={[Img1, Img2]}
         dots={{
-          old: [
+          before: [
             { x: '25%', y: '25%' },
             { x: '50%', y: '50%' },
             { x: '75%', y: '75%' },
           ],
-          new: [
+          after: [
             { x: '20%', y: '40%' },
             { x: '30%', y: '80%' },
           ],

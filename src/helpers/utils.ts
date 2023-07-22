@@ -21,3 +21,16 @@ export const normalizeGroup = (
     left: x,
   }))
 }
+
+export const getImages = (
+  images: string[],
+  maxNum = 2
+): Array<Record<string, string>> => {
+  const imgs = images.slice(0, maxNum)
+  const newImgs = [{ src: imgs[0], className: 'old' }]
+  if (imgs.length > 1) {
+    newImgs.push({ src: imgs[1], className: 'new' })
+  }
+
+  return newImgs
+}

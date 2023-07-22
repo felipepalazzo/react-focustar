@@ -8,17 +8,14 @@ describe('Widget', () => {
   test('toggle', () => {
     render(
       <Widget
-        images={{
-          old: Img1,
-          new: Img2,
-        }}
+        images={[Img1, Img2]}
         dots={{
-          old: [
+          before: [
             { x: 10, y: 10 },
             { x: 100, y: 90 },
             { x: 400, y: 390 },
           ],
-          new: [
+          after: [
             { x: 150, y: 50 },
             { x: 200, y: 80 },
           ],
