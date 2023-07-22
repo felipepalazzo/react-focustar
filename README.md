@@ -1,4 +1,4 @@
-# FocuStar
+# React FocuStar
 
 [![build](https://github.com/felipepalazzo/react-focustar/actions/workflows/ci.yml/badge.svg)](https://github.com/felipepalazzo/react-focustar/actions/workflows/ci.yml)
 
@@ -7,13 +7,8 @@ Simple React component to drop points into pictures
 ## Installation
 
 ```bash
-npm install --save react-focustar
-```
-
-or:
-
-```bash
-yarn add react-focustar
+npm install react-focustar
+# yarn add react-focustar
 ```
 
 ## Usage
